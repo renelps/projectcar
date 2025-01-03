@@ -9,7 +9,8 @@ export function Main(): JSX.Element {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1200px;
+    width: 100%; /* Agora o contêiner ocupa toda a largura */
+    max-width: 1300px; /* Largura máxima, para não ultrapassar a largura da tela */
     background-color: #303030;
     margin: auto;
   

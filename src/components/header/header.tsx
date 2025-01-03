@@ -10,7 +10,12 @@ interface HeaderProps {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(126, 10, 126, 0.2);
+    background: linear-gradient(
+    to right, /* Direção do gradiente da esquerda para a direita */
+    rgba(126, 10, 126, 0.2), /* Cor com transparência */
+    #00003f /* Cor sólida */
+  );
+
     width: 100vw;
     min-height: 70px;
     padding-bottom: 20px;
@@ -20,7 +25,7 @@ interface HeaderProps {
 
     @media (max-width: 768px) {
       width: 100vw;
-      min-height: 40px;
+      min-height: 150px;
       padding-bottom: 10px;
   }
   `
@@ -45,7 +50,6 @@ interface HeaderProps {
   }
 
   @media (max-width: 768px) {
-    padding-bottom: 10px;
     min-height: 60px;
   }
   `

@@ -28,12 +28,16 @@ interface ProductsProps {
   
   const Container = styled.div<{ isLoading: boolean }>`
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     background-color: #303030;
     justify-content: center;
     gap: 20px;
     background: ${({ isLoading }) => (isLoading ? "#303030" : "#303030")};
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      
+    }
+
 `
 
   const SubContainer = styled.div`
@@ -44,9 +48,7 @@ interface ProductsProps {
     gap: 20px;
     border-radius: 50px;
 
-    @media (max-width: ${({theme}) => theme.breakpoints.tablet}) {
-      color: red;
-    }
+
   
   `
   const ProductCard = styled.div`
@@ -61,7 +63,7 @@ interface ProductsProps {
     transition: transform 0.3s ease, background 0.3s ease;
 
     &:hover {
-      background: #4d4d4d;
+      /* background: #4d4d4d; */
       transform: scale(1.02);
     }
 
@@ -71,9 +73,6 @@ interface ProductsProps {
       border-radius: 5px;
     }
 
-    &:hover > a > img {
-      transform: scale(1.02);
-    }
 
     p {
       font-size: 1.2em;

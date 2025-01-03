@@ -12,6 +12,8 @@ interface Product {
   price: string;
   image: string;
 }
+
+
 export function ProductDetails(): JSX.Element {
   const dotBlink = keyframes`
     0% { content: "Carregando." }
@@ -41,11 +43,14 @@ export function ProductDetails(): JSX.Element {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-attachment: fixed;
     background: #303030;
     min-height: 100vh;
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;;
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      flex-direction: column;
+    }
   `;
 
   const SubContainer = styled.div`
@@ -55,11 +60,39 @@ export function ProductDetails(): JSX.Element {
     padding: 30px;
     gap: 50px;
     box-shadow: 1px 1px 3px #a3a3a3;
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      flex-direction: column;
+      gap: 20px;
+
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.mobile}) and (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
+      flex-direction: column;
+      gap: 20px;
+
+     img {
+      width: 100%;
+     }
+
+     div:nth-of-type(2) {
+      max-width: 880px;
+    }
+
+  }
+
     div:first-of-type {
+      margin: auto;
+
     img {
       width: 700px;
       box-shadow: 1px 1px 3px #a3a3a3;
     }
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      img {
+        width: 100%;
+      }
+    }
+
   }
 
   div:nth-of-type(2) {
@@ -70,6 +103,11 @@ export function ProductDetails(): JSX.Element {
       text-align: center;
       color: white;
       font-size: 1.4rem;
+    }
+
+    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      justify-content: center;
+      flex-direction: column;
     }
 
     p:first-of-type {
@@ -110,6 +148,8 @@ export function ProductDetails(): JSX.Element {
         }
       }
     }
+
+    
   }
 
   `;

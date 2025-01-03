@@ -6,10 +6,9 @@ export const theme = {
     text: "#d6d0d6",
   },
 
-
   breakpoints: {
-    mobile: "768",
-    tablet: "900",
-    desktop: "1200"
+    mobile: "768px",
+    tablet: "900px",
+    desktop: "1200px"
   }
 }
