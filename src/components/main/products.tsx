@@ -48,15 +48,18 @@ interface ProductsProps {
     gap: 20px;
     border-radius: 50px;
 
-
+    @media (min-width: ${({theme}) => theme.breakpoints.extraSmall}) and (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      gap: 10px;
+    }
   
   `
   const ProductCard = styled.div`
     display: flex;
+    padding: 10px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 1px 1px 3px #7d0f7c;
+    box-shadow: 1px 1px 7px #ece6ec;
     width: 300px;
     height: 300px;
     cursor: pointer;
@@ -75,7 +78,7 @@ interface ProductsProps {
 
 
     p {
-      font-size: 1.2em;
+      font-size: 1em;
       text-align: center;
       color: white;
     }
@@ -88,6 +91,39 @@ interface ProductsProps {
     a {
       text-decoration: none;
       color: #8080808f;
+    }
+
+    @media (min-width: ${({theme}) => theme.breakpoints.extraSmall}) and (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      margin-top: 10px;
+      max-width: 200px;
+      max-height: 200px;
+
+      > a > img {
+      width: 180px;
+      transition: transform 0.3s ease;
+      border-radius: 5px;
+    }
+    &:hover {
+      /* background: #4d4d4d; */
+      transform: none;
+    }
+
+    p {
+      font-size: 1em;
+      text-align: center;
+      color: white;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+      font-size: 1em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #8080808f;
+    }
     }
 
   `

@@ -102,14 +102,6 @@ const DetailsContainer = styled.div`
     width: 100%;
   }
 
-  p:nth-of-type(2) {
-    text-align: center;
-    color: white;
-    padding: 10px 0;
-
-    font-size: 1.8em;
-  }
-
   @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
     padding: 15px;
     max-width: 550px;
@@ -127,29 +119,36 @@ const DetailsContainer = styled.div`
     color: white;
   }
 
-  p:nth-of-type(2) {
-    text-align: center;
-    color: white;
-    padding: 5px 0;
-    font-size: 1.6em;
-  }
+
   }
   
 `;
 
 const ActionsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza no eixo horizontal */
+  justify-content: center; /* Centraliza no eixo vertical */
+  width: 100%;
+  height: 100%;
+  
+  p {
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+    font-size: 1.6em;
+  }
+  
   button {
     width: 100%;
     box-shadow: 1px 1px 7px #ece6ec;
     cursor: pointer;
     padding: 10px 0;
-    box-sizing: 2px;
     background: #05017d;
     color: white;
     border: none;
     &:hover {
       background: #0a03a7;
-
     }
   }
 `;
@@ -222,9 +221,11 @@ export function ProductDetails(): JSX.Element {
         <DetailsContainer>
           <h1>{product.name}</h1>
           <p>{product.description}</p>
-          <p>R$: {product.price}</p>
 
           <ActionsContainer>
+            <div>
+              <p>R$: {product.price}</p>
+            </div>
             <button>Compra</button>
           </ActionsContainer>
         </DetailsContainer>
