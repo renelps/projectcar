@@ -52,7 +52,7 @@ const ProductsContainer = styled.div`
 
 
   
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallMobile}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
      flex-direction: column;
      margin-top: 20px;
      box-shadow: none;
@@ -68,7 +68,7 @@ const ImageContainer = styled.div`
     border-radius: 3px;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallMobile}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
     flex-direction: column;
     max-width: 700px;
     img {
@@ -80,7 +80,7 @@ const ImageContainer = styled.div`
 const IconContainer = styled.div`
   padding-right: 5px;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallMobile}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
     padding-left: 10px;
   }
 `;
@@ -110,7 +110,7 @@ const DetailsContainer = styled.div`
     font-size: 1.8em;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.smallMobile}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
     padding: 15px;
     max-width: 550px;
     margin: auto;
