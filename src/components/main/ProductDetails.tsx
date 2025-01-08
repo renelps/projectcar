@@ -49,6 +49,7 @@ const ProductsContainer = styled.div`
   gap: 30px;
   border-radius: 3px;
   margin-top: 50px;
+  flex-wrap: wrap;
 
 
   
@@ -86,6 +87,10 @@ const IconContainer = styled.div`
 `;
 
 const DetailsContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 0 30px;
   max-width: 350px;
 
@@ -127,10 +132,10 @@ const DetailsContainer = styled.div`
 const ActionsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centraliza no eixo horizontal */
-  justify-content: center; /* Centraliza no eixo vertical */
+  align-items: center;
+  justify-content: flex-end; 
   width: 100%;
-  height: 100%;
+  margin-top: auto;
   
   p {
     text-align: center;
@@ -141,7 +146,7 @@ const ActionsContainer = styled.div`
   
   button {
     width: 100%;
-    box-shadow: 1px 1px 7px #ece6ec;
+    box-shadow: 1px 1px 7px #cdbdcd;
     cursor: pointer;
     padding: 10px 0;
     background: #05017d;
@@ -172,8 +177,8 @@ const LoadingText = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Ocupa a altura total da janela */
-  width: 100%; /* Garante que ocupa toda a largura */
+  height: 100vh;
+  width: 100%;
 
   &::after {
     content: "Carregando";
@@ -226,7 +231,7 @@ export function ProductDetails(): JSX.Element {
             <div>
               <p>R$: {product.price}</p>
             </div>
-            <button>Compra</button>
+            <button>Comprar</button>
           </ActionsContainer>
         </DetailsContainer>
       </ProductsContainer>

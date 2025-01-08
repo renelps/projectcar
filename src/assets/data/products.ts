@@ -10,6 +10,16 @@ export interface Product {
 
 
 export const products: Product[] = [
+
+  {
+    "id": 10,
+    "name": "Mercedes Benz G63",
+    "image": "/images/Mercedes-Benz-G63.jpg",
+    "transparentImage": "",
+    "description": "O Mercedes-AMG G63 é um SUV que combina esportividade, ótima performance no off-road e luxo1. Ele possui um motor V8 4.0 Biturbo de 585 cv de potência e 86,7 kgf.m de torque12. O G63 vai de 0 a 100 km/h em 4,5 segundos, mesmo pesando mais de duas toneladas e meia",
+    "price": "1.869.900,00"
+  },
+
   {
     "id": 1,
     "name": "BMW Série 4 Coupé",
@@ -88,15 +98,6 @@ export const products: Product[] = [
     "transparentImage": "",
     "description": "O Mercedes Benz AMG GT está disponível em duas motorizações: gasolina e Plug-In Hybrid. O motor V8 biturbo promete fazer vibrar qualquer entusiasta automóvel2. O novo AMG GT 63 4 Matic tem um motor de 4.0 litros de capacidade, 8 cilindros em V e 585 cavalos de potência. O carro atinge 315 km/h de velocidade máxima e cumpre o tradicional arranque dos 0 aos 100 km/h em apenas 3,2 segundos1",
     "price": "1.700.000"
-  },
-
-  {
-    "id": 10,
-    "name": "Mercedes Benz G63",
-    "image": "/images/Mercedes-Benz-G63.jpg",
-    "transparentImage": "",
-    "description": "O Mercedes-AMG G63 é um SUV que combina esportividade, ótima performance no off-road e luxo1. Ele possui um motor V8 4.0 Biturbo de 585 cv de potência e 86,7 kgf.m de torque12. O G63 vai de 0 a 100 km/h em 4,5 segundos, mesmo pesando mais de duas toneladas e meia",
-    "price": "1.869.900,00"
   },
 
   {
