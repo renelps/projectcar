@@ -45,7 +45,7 @@ const ProductsContainer = styled.div`
   padding: 20px 0;
   justify-content: space-between;
   max-width: 1200px;
-  box-shadow: 1px 1px 5px white;
+  box-shadow: 3px 0px 7px #ece6ec;
   gap: 30px;
   border-radius: 3px;
   margin-top: 50px;

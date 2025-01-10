@@ -1,7 +1,9 @@
 import styled from "styled-components"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Products } from "./products"
 import { Header } from "../header/header";
+import { Bounce, ToastContainer, toast } from "../../../node_modules/react-toastify/dist/index";
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Main(): JSX.Element {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,12 +17,28 @@ export function Main(): JSX.Element {
     margin: auto;
   
   `
+
+  useEffect(() => {
+    toast('Este site foi desenvolvido apenas para fins de demonstração. Não realizamos vendas reais de produtos', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+      });
+  }, []);
+
   return (
     <>
       <Header onSearch={setSearchTerm} />
       <Container>
         <Products searchTerm={searchTerm} />
       </Container>
+      <ToastContainer/>
     </>
   )
 }
