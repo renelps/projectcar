@@ -19,6 +19,11 @@ export function Main(): JSX.Element {
   `
 
   useEffect(() => {
+  // Checar se o toast já foi exibido
+  const toastDisplayed = localStorage.getItem('toastDisplayed');
+
+  if (!toastDisplayed) {
+    // Exibir o toast
     toast('Este site foi desenvolvido apenas para fins de demonstração. Não realizamos vendas reais de produtos', {
       position: "top-center",
       autoClose: 5000,
@@ -29,7 +34,11 @@ export function Main(): JSX.Element {
       progress: undefined,
       theme: "light",
       transition: Bounce,
-      });
+    });
+
+    // Marcar o toast como exibido
+    localStorage.setItem('toastDisplayed', 'true');
+  }
   }, []);
 
   return (
