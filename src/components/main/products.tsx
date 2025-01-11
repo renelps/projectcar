@@ -131,7 +131,7 @@ interface ProductsProps {
     @media (min-width: ${({theme}) => theme.breakpoints.extraSmall}) and (max-width: ${({theme}) => theme.breakpoints.mobile}) {
       margin-top: 10px;
       max-width: 150px;
-      max-height: 150px;
+      max-height: 170px;
 
       > a > img {
       width: 140px;
