@@ -28,9 +28,9 @@ const HeaderContainer = styled.div`
   width: 100%;
   height: 50px;
   background: linear-gradient(
-    to left, /* Direção do gradiente da esquerda para a direita */
-    rgba(126, 10, 126, 0.2), /* Cor com transparência */
-    #05017d /* Cor sólida */
+    to left,
+    rgba(126, 10, 126, 0.2), 
+    #05017d
   );
 
   h1 {
@@ -45,16 +45,20 @@ const ProductsContainer = styled.div`
   padding: 20px 0;
   justify-content: space-between;
   max-width: 1200px;
-  box-shadow: 3px 0px 7px #ece6ec;
+  box-shadow: 8px 0px 7px #505050;
   gap: 30px;
   border-radius: 3px;
-  margin-top: 50px;
+  margin-top: 30px;
   flex-wrap: wrap;
 
+  @media (min-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
+    padding: 55px 20px;
+  }
 
   
   @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
      flex-direction: column;
+     margin: auto;
      margin-top: 20px;
      box-shadow: none;
      gap: 5px;
@@ -65,13 +69,14 @@ const ImageContainer = styled.div`
   max-width: 700px;
     img {
     width: 100%;
+    margin: auto;
     box-shadow: 1px 1px 7px #ece6ec;
     border-radius: 3px;
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
     flex-direction: column;
-    max-width: 700px;
+    max-width: 600px;
     img {
       margin: auto;
       width: 85%;
@@ -79,7 +84,7 @@ const ImageContainer = styled.div`
   }
 `;
 const IconContainer = styled.div`
-  padding-right: 5px;
+  padding-right: 10px;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.extraSmall}) and (max-width: ${({ theme }) => theme.breakpoints.largeTablet}) {
     padding-left: 10px;

@@ -136,8 +136,8 @@ interface ProductsProps {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa a altura total da janela */
-    width: 100%; /* Garante que ocupa toda a largura */
+    height: 100vh;
+    width: 100%;
 
     &::after {
       content: "Carregando Produtos";
