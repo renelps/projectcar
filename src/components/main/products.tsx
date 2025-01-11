@@ -134,7 +134,7 @@ interface ProductsProps {
       max-height: 150px;
 
       > a > img {
-      width: 160px;
+      width: 140px;
       transition: transform 0.3s ease;
       border-radius: 3px;
     }
