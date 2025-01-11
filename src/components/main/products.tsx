@@ -129,12 +129,12 @@ interface ProductsProps {
     }
 
     @media (min-width: ${({theme}) => theme.breakpoints.extraSmall}) and (max-width: ${({theme}) => theme.breakpoints.mobile}) {
-      margin-top: 7px;
+      margin-top: 10px;
       max-width: 150px;
       max-height: 150px;
 
       > a > img {
-      width: 180px;
+      width: 160px;
       transition: transform 0.3s ease;
       border-radius: 3px;
     }
