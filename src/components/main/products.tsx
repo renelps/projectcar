@@ -51,6 +51,8 @@ interface ProductsProps {
     @media (min-width: ${({theme}) => theme.breakpoints.extraSmall}) and (max-width: ${({theme}) => theme.breakpoints.mobile}) {
       gap: 10px;
     }
+
+    
   
   `
   const ProductCard = styled.div`
@@ -125,6 +127,39 @@ interface ProductsProps {
       color: #8080808f;
     }
     }
+
+    @media (min-width: ${({theme}) => theme.breakpoints.extraSmall}) and (max-width: ${({theme}) => theme.breakpoints.mobile}) {
+      margin-top: 7px;
+      max-width: 150px;
+      max-height: 150px;
+
+      > a > img {
+      width: 180px;
+      transition: transform 0.3s ease;
+      border-radius: 3px;
+    }
+    &:hover {
+      /* background: #4d4d4d; */
+      transform: none;
+    }
+
+    p {
+      font-size: 0.8rem;
+      text-align: center;
+      color: white;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #8080808f;
+    }
+  }
 
   `
 
